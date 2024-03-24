@@ -1,0 +1,9 @@
+[my_subnet]
+172.168.10.1 ansible_user=username
+
+[my_docker_container]
+172.168.10.2 ansible_user=username
+
+
+[localhost]
+127.0.0.1 ansible_connection=local

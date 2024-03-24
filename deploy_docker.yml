@@ -1,0 +1,11 @@
+---
+- name: Deploy Docker container with Apache
+  hosts: localhost,my_subnet
+  tasks:
+    - name: Build Docker image
+      command: docker build -t my_apache_image .
+      args:
+        chdir: /home/pranavrai070/docker_ansible_project/
+
+    - name: Run Docker container
+      command: docker run -d -p 80:80 --name my_apache_container my_apache_image
